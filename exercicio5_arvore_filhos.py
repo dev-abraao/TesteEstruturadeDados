@@ -32,24 +32,6 @@ class BinaryTree:
             else:
               q.append(temp.right)
 
-    def inOrderTraversal(self,root):
-      if root:
-        self.inOrderTraversal(root.left)
-        print(root.data)
-        self.inOrderTraversal(root.right)
-
-    def preOrderTraversal(self,root):
-      if root:
-        print(root.data)
-        self.preOrderTraversal(root.left)
-        self.preOrderTraversal(root.right)
-
-    def postOrderTraversal(self,root):
-      if root:
-        self.postOrderTraversal(root.left)
-        self.postOrderTraversal(root.right)
-        print(root.data)
-
     def printChildren(self,value):
         q = deque()
         q.append(self.root)
@@ -76,13 +58,3 @@ root.addToTree(40)
 root.addToTree(60)
 root.addToTree(80)
 root.printChildren(70)
-
-print("In Order Traversal \n")
-root.inOrderTraversal(root.root)
-print("\n")
-print("Pre Order Traversal \n")
-root.preOrderTraversal(root.root)
-print("\n")
-print("Post Order Traversal \n")
-root.postOrderTraversal(root.root)
-print("\n")
